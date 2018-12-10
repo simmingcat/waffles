@@ -42,16 +42,20 @@ void keyPressed(){
          song[currentSong].rewind();
          if(currentSong == numberOfSong - 1){
         currentSong = numberOfSong - numberOfSong;
-         }else{  currentSong = currentSong +1;
+         }else{  
+           currentSong = currentSong +1;
        }
-         currentSong = currentSong +1;
            song[currentSong].play();
        }else{
           song[currentSong].rewind();
           currentSong = currentSong +1;
+           if(currentSong == numberOfSong - 1){
+        currentSong = numberOfSong - numberOfSong;
+         }else{  
+           currentSong = currentSong +1;
+       }
    }
 }
-  
    if (key == 'p' || key == 'P') {
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause();
