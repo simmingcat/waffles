@@ -10,6 +10,7 @@ import ddf.minim.ugens.*;
 Minim minim;
 int numberOfSong = 4;
 AudioPlayer[] song = new AudioPlayer[numberOfSong];
+int currentSong = numberOfSong - numberOfSong;
 
 void setup(){
   //size():
@@ -35,9 +36,19 @@ void mousePressed(){
 }
 
 void keyPressed(){
-  int currentSong = 2;
-  if(song[currentSong].isPlaying()){
-  if (key == 'n' || key == 'N') {
+    if (key == 'n' || key == 'N') {
+       if(song[currentSong].isPlaying()){
+         song[currentSong].pause();
+         song[currentSong].rewind();
+         if(currentSong == numberOfSong - 1){
+        currentSong = numberOfSong - numberOfSong;
+         }else{  currentSong = currentSong +1;
+       }
+         currentSong = currentSong +1;
+           song[currentSong].play();
+       }else{
+          song[currentSong].rewind();
+          currentSong = currentSong +1;
    }
 }
   
