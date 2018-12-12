@@ -8,37 +8,57 @@ import ddf.minim.ugens.*;
 
 //global variables
 Minim minim;
-int numberOfSong = 4;
+int numberOfSong = 9;
 AudioPlayer[] song = new AudioPlayer[numberOfSong];
+int currentSong = numberOfSong - numberOfSong;
 
-
-void songSetup(){
+void songSetup() {
   //size():
-    minim = new Minim(this);
-  song[0] = minim.loadFile("Maid with the Flaxen Hair.mp3");
+  minim = new Minim(this);
+  song[0] = minim.loadFile("Showtek ft. We Are Loud & Sonny Wilson - Booyah (Official Music Video).mp3");
   song[1] = minim.loadFile("Avicii - Without You ft. Sandro Cavazza [Lyric Video].mp3");
   song[2] = minim.loadFile("TheFatRat - Never Be Alone (Tasty Release).mp3");
   song[3] = minim.loadFile("Kalimba.mp3");
-  
+  song[4] = minim.loadFile("Sleep Away.mp3");
+  song[5] = minim.loadFile("Maid with the Flaxen Hair.mp3");
+  song[6] = minim.loadFile("Ghost_Town.mp3");
+  song[7] = minim.loadFile("Firefly (1).mp3");
+  song[8] = minim.loadFile("Plex.mp3");
+
   println("start of console");
   println("click the console to finish starting this program");
   println("press P to Play and Pause");
-  
 }
 
-void songDraw(){
-  
-  
+void songDraw() {
 }
 
-void mousePressed(){
-  
+void mousePressed() {
 }
 
-void keyPressed(){
-  int currentSong = 2;
-  
-   if (key == 'p' || key == 'P') {
+void keyPressed() {
+  if (key == 'n' || key == 'N') {
+    if (song[currentSong].isPlaying()) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      if (currentSong == numberOfSong - 1) {
+        currentSong = numberOfSong - numberOfSong;
+      } else {  
+        currentSong = currentSong +1;
+      }
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      currentSong = currentSong +1;
+      if (currentSong == numberOfSong - 1) {
+        currentSong = numberOfSong - numberOfSong;
+      } else {  
+        currentSong = currentSong +1;
+      }
+    }
+  }
+
+  if (key == 'p' || key == 'P') {
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause();
     } else if ( song[currentSong].position() == song[currentSong].length() ) {

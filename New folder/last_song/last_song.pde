@@ -15,7 +15,7 @@ int currentSong = numberOfSong - numberOfSong;
 void setup() {
   //size():
   minim = new Minim(this);
-  song[0] = minim.loadFile("");
+  song[0] = minim.loadFile("Showtek ft. We Are Loud & Sonny Wilson - Booyah (Official Music Video).mp3");
   song[1] = minim.loadFile("Avicii - Without You ft. Sandro Cavazza [Lyric Video].mp3");
   song[2] = minim.loadFile("TheFatRat - Never Be Alone (Tasty Release).mp3");
   song[3] = minim.loadFile("Kalimba.mp3");
@@ -32,7 +32,7 @@ void mousePressed() {
 }
 
 void keyPressed() {
-    if (key == 'n' || key == 'N') {
+  if (key == 'n' || key == 'N') {
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
@@ -52,7 +52,7 @@ void keyPressed() {
       }
     }
   }
- if (key == 'm' || key == 'M') {
+  if (key == 'm' || key == 'M') {
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
@@ -71,7 +71,7 @@ void keyPressed() {
         currentSong = currentSong - 1;
       }
     }
-  
+
     if (key == 'p' || key == 'P') {
       if ( song[currentSong].isPlaying() ) {
         song[currentSong].pause();
