@@ -56,19 +56,20 @@ void keyPressed() {
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
-      if (currentSong == numberOfSong + 1) {
-        currentSong = numberOfSong + numberOfSong;
+      if (currentSong == numberOfSong - numberOfSong) {
+        println("current song is the first song,","number:"+ currentSong);
+        currentSong = numberOfSong - 1;
+        println("current Song is now the last song,","number:"+currentSong);
       } else {  
-        currentSong = currentSong - 1;
+        currentSong -= 1;
       }
       song[currentSong].play();
     } else {
       song[currentSong].rewind();
-      currentSong = currentSong - 1;
-      if (currentSong == numberOfSong + 1) {
-        currentSong = numberOfSong + numberOfSong;
+      if (currentSong == numberOfSong - numberOfSong) {
+        currentSong = numberOfSong -1;
       } else {  
-        currentSong = currentSong - 1;
+        currentSong -=1;
       }
     }
 
