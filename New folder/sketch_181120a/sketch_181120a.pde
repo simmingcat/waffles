@@ -23,9 +23,10 @@ void setup () {
 void draw() {
   songDraw();
   quitButtonDraw();
-  musicPlayerBottom();
+  
 }
 
 void mouseClicked() { 
   quitButtonMouseClicked();
+  musicPlayerBottom();
 }
