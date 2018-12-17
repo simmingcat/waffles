@@ -8,9 +8,8 @@ void musicPlayerGUI_Setup() {
    
   
   fill(blue);
-  noStroke();
  triangle(225, 487, 225, 515, 251, 500);
- stroke(1);
+
  rect(257, 484, 10, 35, 7);
   rect(273, 484, 10, 35, 7);
   

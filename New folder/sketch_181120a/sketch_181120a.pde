@@ -14,6 +14,7 @@ color hoverOverBotton= pink;
 
 void setup () {
     background(white);
+     skipSetup();
    songSetup();
   quitButtonSetup();
   musicPlayerGUI_Setup();
@@ -21,7 +22,7 @@ void setup () {
 }
 
 void draw() {
-  songDraw();
+  skipDraw();
   quitButtonDraw();
   
 }

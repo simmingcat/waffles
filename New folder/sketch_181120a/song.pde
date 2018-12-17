@@ -30,13 +30,9 @@ void songSetup() {
   println("press P to Play and Pause");
 }
 
-void songDraw() {
-}
-
-void mousePressed() {
-}
 
 void keyPressed() {
+  skipKeyPressed() ;
   if (key == 'n' || key == 'N') {
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
