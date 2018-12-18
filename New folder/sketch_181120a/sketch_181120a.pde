@@ -14,16 +14,19 @@ color hoverOverBotton= pink;
 
 void setup () {
     background(white);
-     skipSetup();
+     size(500, 600);
+     //skipSetup();
    songSetup();
   quitButtonSetup();
   musicPlayerGUI_Setup();
-   size(500, 600);
+  
 }
 
 void draw() {
-  skipDraw();
+  //skipDraw();
+    songDraw();
   quitButtonDraw();
+
   
 }
 
