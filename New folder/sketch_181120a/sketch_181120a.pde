@@ -21,7 +21,6 @@ void setup () {
 }
 
 void draw() {
-
   //skipDraw();
     MovingDraw();
     songDraw();

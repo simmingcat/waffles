@@ -1,10 +1,11 @@
-color c = color(0);
-float x = 250;
-float y = 100;
-float speed = 4;
+color purple=(#8C14D8);
+float x = 300;
+float y = 200;
+
+float speed = 1;
 
 void setup() {
-  size(500,200);
+  size(500,600);
 }
 
 void draw() {
@@ -14,14 +15,21 @@ void draw() {
 }
 
 void move() {
+      
   x = x + speed;
-  if (x > 400) {
-    x = 250;
+  if (x > 350) {
+    x = 300;
+    
   }
-}
+  }
+
 
 void display() {
-  fill(c);
-  ellipse(x,y,10,10);
+  fill(purple);
+    rect(x, y, 50, 67, 3);
+  
+   ellipse(x, 254, 65, 65);
+  
+  
   
 }
