@@ -1,7 +1,7 @@
 void quitButtonSetup() {
 }
 void quitButtonDraw() {
- //println ("Mousex:", mouseX, "\tMouseY:", mouseY);
+ println ("Mousex:", mouseX, "\tMouseY:", mouseY);
     
     //if(mouseX>115 && mouseX<25 && mouseY>117 && mouseY<10){   
 //fill(hoverOverBotton);

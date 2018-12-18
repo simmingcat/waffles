@@ -1,6 +1,4 @@
 //gloabal variable
-
-
 color gray=#DEDEDE;
 color lightGreen=#C3FFBF;
 color white=#FFFFFF;
@@ -23,11 +21,12 @@ void setup () {
 }
 
 void draw() {
+
   //skipDraw();
+    MovingDraw();
     songDraw();
   quitButtonDraw();
 
-  
 }
 
 void mouseClicked() { 
